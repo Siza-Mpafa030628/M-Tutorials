@@ -1,0 +1,88 @@
+.bala {
+    padding: 35px; /* 35px / 3 */
+}
+
+#calc-container {
+    border: 2px solid rgb(54, 54, 54);
+    border-radius: 3.33px; /* 10px / 3 */
+    width: 116.67px; /* 350px / 3 */
+    height: 179.33px; /* 538px / 3 */
+    position: relative;
+    padding: 2px; /* 2px / 3 */
+    top: 0px;
+}
+
+#clear {
+    height: 15px;
+    border-radius: 3.33px; /* 10px / 3 */
+    font-size: xx-small;
+}
+
+/* INNER STYLES - FORM */
+.formCalc {
+    margin: 0;
+    background-color: rgb(91, 162, 204);
+    width: 90%; /* 90% / 3 */
+    height: 93%; /* 93% / 3 */
+    padding: 5px; /* 15px / 3 */
+    position: absolute;
+    border-radius: 3.33px; /* 10px / 3 */
+    margin: auto;
+}
+
+#input-selector {
+    width: 78%; /* 100% / 3 */
+    height: 20%; /* 20% / 3 */
+}
+
+#input-field {
+    width: 90%; /* 90% / 3 */
+    border: 1px solid grey;
+    border-radius: 5px; /* 5px / 3 */
+    height: 85%; /* 85% / 3 */
+}
+
+#result {
+    background-color: white;
+    height: 15%; /* 15% / 3 */
+    margin-top: 0;
+    border-radius: 1.67px; /* 5px / 3 */
+}
+
+/* BUTTONS */
+#controls {
+    border: 1px solid black;
+    width: 100%; /* 100% / 3 */
+    height: 75%; /* 75% / 3 */
+    margin-top: 5%; /* 5% / 3 */
+    border-radius: 2.67px; /* 8px / 3 */
+    padding: 1px; /* 1px / 3 */
+}
+
+.button-row {
+    margin: 8.33px; /* 25px / 3 */
+    width: 80%; /* 80% / 3 */
+    height: 10%; /* 10% / 3 */
+    border-radius: 10px; /* 10px / 3 */
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btnCalc {
+    width: 25%; /* 25% / 3 */
+    height: 100%; /* 100% / 3 */
+    margin: 2px; /* 2px / 3 */
+    border-radius: 3.33px; /* 10px / 3 */
+    border: 0.5px solid black; /* 0.5px / 3 */
+    font-size: x-small;
+    /* font-weight: bolder; */
+}
+
+.m-button {
+    width: 33.3%; /* 33.3% / 3 */
+    margin-top: 0;
+    font-size: xx-small;
+    margin-bottom: 3px; /* 3px / 3 */
+    height: 15px;
+}

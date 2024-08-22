@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bala">
+<div id="calc-container">
+        <form method="post">
+            <div id="input-selector">
+                <input type="text" name="" id="input-field">
+                <p id="result"></p>
+            </div>
+            <div id="controls">
+                <div class="button-row">
+                    <button value="" onclick="susaLento('')" type="button">off</button>
+                    <button  value="" onclick="showNumber(7)" type="button">7</button>
+                    <button  value="" onclick="showNumber(8)" type="button">8</button>
+                    <button value="" onclick="showNumber(9)" type="button" >9</button>
+                </div>
+                <div class="button-row">
+                    <button>%</button>
+                    <button  value="" onclick="showNumber(4)" type="button">4</button>
+                    <button  value="" onclick="showNumber(5)" type="button">5</button>
+                    <button  value="" onclick="showNumber(6)" type="button">6</button>
+                </div>
+                <div class="button-row">
+                    <button>&#8730</button>
+                    <button value="" onclick="showNumber(1)" type="button">1</button>
+                    <button value="" onclick="showNumber(2)" type="button">2</button>
+                    <button value="" onclick="showNumber(3)" type="button">3</button>
+                </div>
+                <div class="button-row">
+                    <button value="" onclick="showNumber('.')" type="button">.</button>
+                    <button value="" onclick="showNumber('/')" type="button">&#247;</button>
+                    <button value="" onclick="showNumber('*')" type="button">x</button>
+                    <button id="clear" onclick="backspace()" type="button">AC</button>
+                </div>
+                <div class="button-row">
+                    <button value="" onclick="showNumber(0)" type="button">0</button>
+                    <button value="" onclick="showNumber('+')" type="button">+</button>
+                    <button value="" onclick="showNumber('-')" type="button">-</button>
+                    <button value="" onclick="evaluateExpression()" type="button">=</button>
+                </div>
+                <div class="button-row">
+                    <button class="m-button" value="" type="button">MR</button>
+                    <button class="m-button" value="" type="button">M+</button>
+                    <button class="m-button" value="" type="button">M-</button>
+                </div>
+
+            </div>
+        </form>
+</div>
+
+
+
+    
+    
+
+    <script src="calc.js"></script>
+
+</html>

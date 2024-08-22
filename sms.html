@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="sms.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body class="sms">
+<header>
+    <h1 class="top">Learn To Love</h1>
+    <button id="khaltyulator" onclick="toggleCalculator()">  
+        <h1 id="mathText" class="bottom">MATHEMATICS</h1> 
+    </button>
+    <audio    autoplay loop preload="auto" src="/ayra_starr_giveon_last_heartbreak_song_lyrics_aac_49678-[AudioTrimmer.com].m4a"></audio>
+    <button id="toggle-legend">Show Legend</button>
+</header>
+<br>
+
+<input id="search" onkeyup="searchData()" type="text" placeholder="Search by ID or Name" />
+
+
+<div class="clear-btn-container">
+    <span class="clear-btn" onclick="clearSearch()">x</span>
+</div>
+
+<div>
+    
+    <div class="key" id="legend">
+        <p class="legend"><em>Buttons You Will See On The Table</em></p>
+        <div class="key-item">
+            <span><button>📂</button></span>
+            <span>Click to find the sort and average buttons</span>
+        </div>
+        <div class="key-item">
+            <span><button>sort</button></span>
+            <span>Click this button to sort the marks and/or IDs</span>
+        </div>
+         <div class="key-item">
+            <span><button>avrg</button></span>
+            <span>Click this button to see the average mark of the students</span>
+        </div>
+         <div class="key-item">
+            <span><button>...</button></span>
+            <span>Click this button to find the the<button class="susa"> Remove </button>and<button class="lungisa"> Update</button> buttons</span>
+        </div>
+        
+    </div>
+<fieldset class="container">
+    
+    <br>
+    <fieldset class="form" >
+        <form id="summit">
+            <label for="fname">Name:</label><br>
+            <input type="text" id="fname" name="fname"   pattern="[A-Za-z]+ " title="Please enter letters only" required> <br>
+            <label for="lname">Surname:</label><br>
+            <input type="text" id="lname" name="lname" title="Please enter letters only" required><br>
+            <label for="pupilID">Student ID:</label><br>
+            <input type="number" id="pupilID" name="pupilID" min="1" max="100" required><br>
+            <label for="grades">Marks:</label><br>
+            <input type="number" id="grades" name="grades" min="0" max="100" required><br>
+            <button type="button" onclick="addPupil()" id="yifakemntanam">ADD</button>
+        </form>
+    </fieldset>
+    <br>
+    <fieldset class="tafile">
+        <button id="toggle-table-btn">HIDE TABLE</button>
+        <table id="theybhl">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Student ID</th>
+                    <th>Marks</th>
+                    <th>
+                        <button id="folder-btn">📂</button>
+                        <div id="nested-btns" style="display: none;">
+                            <button id="sort-marks-btn" style="background-color:  rgb(243, 185, 110);">sort</button>
+                            <button id="average-btn" style="background-color:  rgb(15, 15, 15); color: rgb(241, 185, 112);">avrg</button>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </fieldset>
+</fieldset>
+</div>
+
+<div id="calculator">
+    <div id="calc-container">
+        <form method="post" class="formCalc" onsubmit="return false;">
+            <div id="input-selector">
+                <input type="text" name="" id="input-field">
+                
+            </div>
+            <div id="controls">
+                <div class="button-row">
+                    <button class="btnCalc" value="" onclick="susaLento('')" type="button">AC</button>
+                    <button  class="btnCalc" value="" onclick="showNumber(7)" type="button">7</button>
+                    <button class="btnCalc" value="" onclick="showNumber(8)" type="button">8</button>
+                    <button class="btnCalc" value="" onclick="showNumber(9)" type="button">9</button>
+                </div>
+                <div class="button-row">
+                    <button class="btnCalc" onclick="calculatePercentage(event)" >%</button>
+                    <button class="btnCalc" value="" onclick="showNumber(4)" type="button">4</button>
+                    <button class="btnCalc" value="" onclick="showNumber(5)" type="button">5</button>
+                    <button class="btnCalc" value="" onclick="showNumber(6)" type="button">6</button>
+                </div>
+                <div class="button-row">
+                    <button class="btnCalc" onclick="calculateSquareRoot(event)">&#8730</button>
+                    <button class="btnCalc" value="" onclick="showNumber(1)" type="button">1</button>
+                    <button class="btnCalc" value="" onclick="showNumber(2)" type="button">2</button>
+                    <button class="btnCalc" value="" onclick="showNumber(3)" type="button">3</button>
+                </div>
+                <div class="button-row">
+                    <button class="btnCalc" value="" onclick="showNumber('.')" type="button">.</button>
+                    <button class="btnCalc" value="" onclick="showNumber('/')" type="button">&#247;</button>
+                    <button class="btnCalc" value="" onclick="showNumber('*')" type="button">x</button>
+                    <button id="clear" onclick="backspace()" type="button">Del</button>
+                </div>
+                <div class="button-row">
+                    <button class="btnCalc" value="" onclick="showNumber(0)" type="button">0</button>
+                    <button class="btnCalc" value="" onclick="showNumber('+')" type="button">+</button>
+                    <button class="btnCalc" value="" onclick="showNumber('-')" type="button">-</button>
+                    <button class="btnCalc" value="" onclick="evaluateExpression()" type="button">=</button>
+                </div>
+                <div class="button-row">
+                    <button class="m-button" onclick="memoryRecall()" id="mr-button" type="button">MR</button>
+                    <button class="m-button" onclick="memoryAdd()" id="mplus-button" type="button">M+</button>
+                    <button class="m-button"  onclick="memorySubtract()"id="mminus-button" type="button">M-</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<button  type="button"id="toggle-chart-btn">HIDE CHART</button>
+<canvas id="studentPieChart" style="width:100%;max-width:600px"></canvas>
+
+<script src="sms.js"></script>
+<script src="calc.js"></script>
+</body>
+</html>
+

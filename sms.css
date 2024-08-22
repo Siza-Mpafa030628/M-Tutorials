@@ -1,0 +1,254 @@
+/* SMS.html */
+/* BODY */
+.sms{
+  
+    border: black 1px solid;
+    border-radius: 10px;
+    background-color:rgba(0, 150, 150, 0.6);
+    min-height: 100vh;/*vh(viewhight)= 100% of the view  hight*/
+    overflow: auto;
+    padding: 20px; 
+}
+#folder-btn{
+  background-color: #000;
+}
+
+#calculator {
+  display: none;
+}
+.small-font {
+  font-size: 12px;
+}
+
+/* HEADER THAT HAS TWO NESTED h1 ELEMENTS*/
+header{
+    border: antiquewhite 1px solid;
+    border-radius: 40px;
+    background-color:rgba(92, 134, 134, 0.2)
+    
+}
+/*top & bottom are H1 elements with a header*/
+h1.top{
+    color: #3a5a5a; /*adds a  Darker shade of teal color to the text */
+    text-align: center; /*use text-align to position a text; center for it to be in hte middle*/
+  }
+  h1.bottom{
+    color: rgb(240, 153, 121); /*adds a color to the text*/
+    text-align: center; /*use text-align to position a text; center for it to be in hte middle*/
+  }
+  #khaltyulator{
+    margin-left: 535px;
+    background-color:rgba(92, 134, 134, 0.2);
+    border-radius: 20px;
+    /* border-color:rgba(123, 129, 129, 0.2) ; */
+    /* background-color: #94829c; */
+  }
+
+  /* #calculator{
+    top: 157px;
+    width: 20%;
+    min-height: 50%;
+    /* margin: auto;  */
+  
+    #calculator {
+      position: absolute; /* Position relative to the nearest positioned ancestor */
+      top: calc(148px + 00.01px); /* Adjust this value to position it below the header */
+      left: 10px; /* Align it to the left */
+      width: 20%;
+      min-height: 50%;
+      padding: 0px;
+      padding-right: 0%;
+  }
+
+  /* styling for the search input(positioning) */
+#search{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+ 
+/* styling for the clear button "x" */
+.clear-btn {
+        position: fixed;
+        right: 10px;
+        top: 0px;
+        cursor: pointer;
+        background-color: rgba(0,0,0,0.5);
+        border: 1px solid rgb(12, 12, 12);
+        border-radius: 5px;
+        padding: 1px 2px 0.01px 3px;
+        font-size: 16px;
+        color: black; 
+      }
+ /* styling for the search input(positioning) */     
+input[type="text"] { 
+    padding-left: 30px; 
+    width: 177px;
+  }
+  .susa{
+    background-color: red;
+    border-radius: 10px;
+  }
+  .lungisa{
+    background-color: #C9A0DC;
+    border-radius: 10px;
+  }
+/* A parent fieldset with two nested fieldsets (.form & .tafile) */
+.container {
+    position: relative;
+   border-color: black;
+   background-color:rgba(92, 134, 134, 0.2);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 40%;
+    min-height: 50%;
+    margin-left: 32%;
+    /* padding-right:100px ; */
+    /* margin: auto;     */
+    
+}
+
+/* a fieldset for the form */
+.form{
+    background-color:rgba(0, 150, 150, 0.6);
+    width: 50%; 
+  /* height: 55%;  */
+  margin: auto;
+    border-color: #3a5a5a;
+    border-radius: 10px;    
+}
+
+/* a fieldset for the table */
+.tafile{
+    background-color:rgba(0, 150, 150, 0.6);
+    width: 50%; 
+    height: 08%; 
+    margin: auto;
+    border-color: #3a5a5a; 
+    border-radius: 10px;
+    overflow: auto;
+}
+
+/* styling for the table */
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#toggle-legend{
+  right:0;
+}
+
+.key {
+  
+    display: none; /* Hide the legend by default */
+      top: 147px;
+      right:0;
+    position: absolute;
+    border: 1px solid;
+      flex-direction: column;
+      margin: 20px;
+      width: 20%;
+      min-height: 41%;
+      background-color: rgb(91, 162, 204);
+      border-radius: 20px
+  }
+  
+  .key-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+  .legend{
+    text-align: center;
+  }
+  
+  
+  span{
+      margin-left:10px;
+      margin-top: 10px
+  }
+
+ /* INDEX.html */
+
+/* a div element in index.html */
+#khont{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    width: 100vw
+  }
+
+/* a fieldset element in index.html */
+.setM{
+    width: 8%;
+    height: auto;
+    margin: auto;
+    border: 2px solid #000;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgba(201, 160, 220, 0.5);
+  }
+
+
+
+/* WELKOM.HTML */
+
+/* body */
+  .welcome{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* styling for the video */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /* styling for the fieldset */
+  .intro {
+    position: relative;
+    z-index: 1;
+    color:powderblue;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    min-height: 50%;
+    margin: auto;    
+    border-radius: 20px;
+    top: 100px; 
+  }
+  
+  /* styling for the p elements within the fieldset */
+  
+   /* h3 element within the fieldset*/ 
+  h3.fpage{
+    text-align: center;
+    display: block;
+    margin: 0;
+
+
+    .fpage:hover {
+        background-color: #FFC0CB; /* Light pink color for hover */
+        cursor: pointer; /* Changes the cursor to a hand icon when hovering */
+      }
+}
+
+  /* button   */
+#presshere{
+    border-color: #3a5a5a;
+    border-radius: 10px;
+    background-color: pink;
+    }
